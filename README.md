@@ -1,6 +1,6 @@
 # techex
 A technical exercise in API creation
-## A Python microframework based REST API to geospatial data
+## A Python Microframework based REST API for Geospatial Data
 This project creates a Flask based API to a PostGres/PostGIS database
 ## Technology & Frameworks
 - Python
