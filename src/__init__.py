@@ -11,10 +11,10 @@ def create_app():
 
     with app.app_context():
 
-        from techex.models import db
+        from src.models import db
         db.init_app(app)
 
-        from techex.api import api_blueprint
+        from src.api import api_blueprint
         app.register_blueprint(api_blueprint)
 
         return app
