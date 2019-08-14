@@ -22,9 +22,8 @@ def add_user():
 
 @api_blueprint.route('/users')
 def users():
-    user_list = [user.username+', '+user.email for user in User.query.all()]
+    user_list = [user.username + ', ' + user.email for user in User.query.all()]
     if user_list:
         return '; '.join(user_list)
     else:
         return 'No users found'
-
