@@ -1,7 +1,7 @@
 from flask import request
 from . import api_blueprint
-from techex.models import db
-from techex.models import User
+from data.models import db
+from data.models import User
 
 
 @api_blueprint.route('/')
