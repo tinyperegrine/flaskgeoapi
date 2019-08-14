@@ -1,7 +1,7 @@
 from flask import request
 from . import api_blueprint
-from data.models import db
-from data.models import User
+from data import db
+from data import User
 
 
 @api_blueprint.route('/')
