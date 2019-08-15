@@ -2,6 +2,7 @@ from flask import request
 from . import api_blueprint
 from data import db
 from data import User
+from data import CoffeeShop
 
 
 @api_blueprint.route('/')
@@ -27,3 +28,13 @@ def users():
         return '; '.join(user_list)
     else:
         return 'No users found'
+
+
+@api_blueprint.route('/coffeeshops')
+def coffee_shops():
+    coffee_shop_list = [shop.name + ' - ' + shop.zip + ' ' + str(shop.to_geojson()) for shop in CoffeeShop.query.all()]
+    if coffee_shop_list:
+        return '; '.join(coffee_shop_list)
+    else:
+        return 'No coffee shops found'
+

@@ -9,6 +9,7 @@ def _create_app():
     app.config[
         'SQLALCHEMY_DATABASE_URI'] = 'postgresql://docker:docker@localhost:25432/gis'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    app.config['SQLALCHEMY_ECHO'] = True
 
     with app.app_context():
         db.init_app(app)
