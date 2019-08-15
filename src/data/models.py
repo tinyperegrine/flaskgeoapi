@@ -11,6 +11,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
+
 class CoffeeShop(db.Model):
     __tablename__ = 'coffee_shops'
     id = db.Column(db.Integer, primary_key=True)
@@ -29,4 +30,3 @@ class CoffeeShop(db.Model):
 
     def __repr__(self):
         return '<CoffeShop %r>' % self.name
-    

@@ -13,7 +13,7 @@ def _create_app():
 
     with app.app_context():
         db.init_app(app)
-        app.register_blueprint(api_blueprint)
+        app.register_blueprint(api_blueprint, url_prefix='/api/v1')
         return app
 
 
