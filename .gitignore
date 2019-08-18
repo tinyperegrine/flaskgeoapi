@@ -9,7 +9,7 @@ __pycache__/
 coverage/
 
 # logs:
-*.log
+logs/
 
 # Flask stuff:
 instance/

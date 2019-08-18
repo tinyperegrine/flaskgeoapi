@@ -10,5 +10,5 @@ class APIException(Exception):
         self.payload = payload
 
     def to_dict(self):
-        rv = {'message': self.message, 'payload': self.payload}
-        return rv
+        error_dict = {'message': self.message, 'payload': self.payload}
+        return error_dict

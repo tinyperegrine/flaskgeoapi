@@ -3,6 +3,7 @@ The api Blueprint provides all the api routes for this application.
 This Blueprint allows for the api to ...
 """
 from flask import Blueprint, make_response, jsonify
+
 api_blueprint = Blueprint('api', __name__, template_folder='templates')
 
 from . import exceptions
@@ -44,6 +45,19 @@ def internal_error(e):
     return make_response(jsonify(error=str(e)), 500)
 
 
+# Custom API Exception
 @api_blueprint.errorhandler(exceptions.APIException)
 def handle_api_exception(error):
     return make_response(jsonify(error.to_dict()), error.status_code)
+
+
+# Return webarg validation errors as JSON
+@api_blueprint.errorhandler(422)
+def handle_webarg_error(err):
+    headers = err.data.get("headers", None)
+    messages = err.data.get("messages", ["Invalid request."])
+    if headers:
+        return jsonify({"errors": messages}), err.code, headers
+    else:
+        return jsonify({"errors": messages}), err.code
+
