@@ -43,7 +43,9 @@ class UserAPI(MethodView):
         except exc.IntegrityError as e:
             errorInfo = e.orig.args
             error_message = errorInfo[0]
-            raise exceptions.APIException(message='Unable to create user, duplicates found: {}'.format(error_message))
+            raise exceptions.APIException(
+                message='Unable to create user, duplicates found: {}'.format(
+                    error_message))
 
     # curl -i -X DELETE http://localhost:5000/api/v1/users/6
     def delete(self, user_id):
@@ -53,7 +55,8 @@ class UserAPI(MethodView):
             if deleted:
                 return make_response(jsonify({user.username: "deleted"}), 200)
             else:
-                raise exceptions.APIException(message='Unable to delete user: {}'.format(user.username))
+                raise exceptions.APIException(
+                    message='Unable to delete user: {}'.format(user.username))
         else:
             abort(404, description="User not found, id: {}".format(user_id))
 
@@ -68,10 +71,13 @@ class UserAPI(MethodView):
                 if updated_user:
                     return make_response(jsonify(user.to_dict()), 200)
                 else:
-                    return make_response(jsonify({user.username: "no changes"}), 200)
+                    return make_response(jsonify({user.username: "no changes"}),
+                                         200)
             except exc.IntegrityError as e:
                 errorInfo = e.orig.args
                 error_message = errorInfo[0]
-                raise exceptions.APIException(message='Unable to update user, duplicates found: {}'.format(error_message))
+                raise exceptions.APIException(
+                    message='Unable to update user, duplicates found: {}'.
+                    format(error_message))
         else:
             abort(404, description="User not found, id: {}".format(user_id))

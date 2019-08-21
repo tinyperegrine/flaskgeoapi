@@ -24,3 +24,11 @@ venv/
 
 # mac
 .DS_Store
+
+# bazel
+src/bazel-bin
+src/bazel-genfiles
+src/bazel-out
+src/bazel-src
+src/bazel-testlogs
+
