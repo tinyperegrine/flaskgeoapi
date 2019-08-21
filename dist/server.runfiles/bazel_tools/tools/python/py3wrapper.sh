@@ -1,0 +1,1 @@
+/private/var/tmp/_bazel_ugp/ca29d45a28e8e3fb501c24704c17fc1d/execroot/__main__/bazel-out/host/bin/external/bazel_tools/tools/python/py3wrapper.sh

@@ -1,0 +1,10 @@
+__main__/api/__init__.py /Users/ugp/Projects/baseapis/techex/src/api/__init__.py
+__main__/api/exceptions.py /Users/ugp/Projects/baseapis/techex/src/api/exceptions.py
+__main__/api/routes.py /Users/ugp/Projects/baseapis/techex/src/api/routes.py
+__main__/api/views.py /Users/ugp/Projects/baseapis/techex/src/api/views.py
+__main__/data/__init__.py /Users/ugp/Projects/baseapis/techex/src/data/__init__.py
+__main__/data/models.py /Users/ugp/Projects/baseapis/techex/src/data/models.py
+__main__/external/bazel_tools/tools/python/py3wrapper.sh /private/var/tmp/_bazel_ugp/ca29d45a28e8e3fb501c24704c17fc1d/execroot/__main__/bazel-out/host/bin/external/bazel_tools/tools/python/py3wrapper.sh
+__main__/server /private/var/tmp/_bazel_ugp/ca29d45a28e8e3fb501c24704c17fc1d/execroot/__main__/bazel-out/darwin-fastbuild/bin/server
+__main__/server.py /Users/ugp/Projects/baseapis/techex/src/server.py
+bazel_tools/tools/python/py3wrapper.sh /private/var/tmp/_bazel_ugp/ca29d45a28e8e3fb501c24704c17fc1d/execroot/__main__/bazel-out/host/bin/external/bazel_tools/tools/python/py3wrapper.sh
