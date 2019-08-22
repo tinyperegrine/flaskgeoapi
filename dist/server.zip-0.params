@@ -1,0 +1,11 @@
+__main__.py=bazel-out/darwin-fastbuild/bin/server.temp
+__init__.py=
+runfiles/__main__/__init__.py=
+runfiles/__main__/server.py=server.py
+runfiles/__main__/data/__init__.py=data/__init__.py
+runfiles/__main__/data/models.py=data/models.py
+runfiles/__main__/api/__init__.py=api/__init__.py
+runfiles/__main__/api/exceptions.py=api/exceptions.py
+runfiles/__main__/api/routes.py=api/routes.py
+runfiles/__main__/api/views.py=api/views.py
+runfiles/bazel_tools/tools/python/py3wrapper.sh=bazel-out/host/bin/external/bazel_tools/tools/python/py3wrapper.sh

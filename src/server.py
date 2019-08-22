@@ -8,7 +8,7 @@
 # to build
 # ========
 # cd to src folder (folder with this file)
-# bazel build :server
+# bazel build :server --build_python_zip
 # cp -a bazel-bin/. ../dist
 # cd to parent
 # pip freeze > requirements.txt
@@ -26,6 +26,7 @@
 # ==========
 # move dist folder contents to different machine
 # pip install -r requirements.txt
+# unzip server.zip
 
 # to run
 # =======
